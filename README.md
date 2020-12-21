@@ -1,5 +1,7 @@
 # Element iOS
 
+*This fork has been customised for Active Gymnastics. A couple of the config files have been updated to reflect our needs, and might not be best for normal use. Our Matrix server is a closed federation, so some changes we make might not make sense for regular servers*
+
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/vector-im/element-ios)
 ![badge-languages](https://img.shields.io/badge/languages-Swift%20%7C%20ObjC-orange.svg)
 [![Swift 5.x](https://img.shields.io/badge/Swift-5.x-orange)](https://developer.apple.com/swift)
