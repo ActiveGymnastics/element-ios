@@ -85,39 +85,31 @@ final class BuildSettings: NSObject {
     }
     
     // Element-Web instance for the app
-    static let applicationWebAppUrlString = "https://app.element.io"
+    static let applicationWebAppUrlString = "https://spot.activegym.com.au"
     
     
     // MARK: - Server configuration
     
     // Default servers proposed on the authentication screen
-    static let serverConfigDefaultHomeserverUrlString = "https://matrix.org"
+    static let serverConfigDefaultHomeserverUrlString = "https://matrix.activegym.com.au"
     static let serverConfigDefaultIdentityServerUrlString = "https://vector.im"
     
-    static let serverConfigSygnalAPIUrlString = "https://matrix.org/_matrix/push/v1/notify"
+    static let serverConfigSygnalAPIUrlString = "https://matrix.activegym.com.au/_matrix/push/v1/notify"
     
     
     // MARK: - Legal URLs
-    static let applicationCopyrightUrlString = "https://element.io/copyright"
-    static let applicationPrivacyPolicyUrlString = "https://element.io/privacy"
-    static let applicationTermsConditionsUrlString = "https://element.io/terms-of-service"
+    static let applicationCopyrightUrlString = "https://activegym.com.au/spot-copyright"
+    static let applicationPrivacyPolicyUrlString = "https://activegym.com.au/spot-pp"
+    static let applicationTermsConditionsUrlString = "https://activegym.com.au/spot-tos"
     
     
     // MARk: - Matrix permalinks
     // Paths for URLs that will considered as Matrix permalinks. Those permalinks are opened within the app
     static let matrixPermalinkPaths: [String: [String]] = [
-        "app.element.io": [],
-        "staging.element.io": [],
-        "develop.element.io": [],
-        "mobile.element.io": [""],
-        // Historical ones
-        "riot.im": ["/app", "/staging", "/develop"],
-        "www.riot.im": ["/app", "/staging", "/develop"],
-        "vector.im": ["/app", "/staging", "/develop"],
-        "www.vector.im": ["/app", "/staging", "/develop"],
-        // Official Matrix ones
-        "matrix.to": ["/"],
-        "www.matrix.to": ["/"],
+        "spot.activegym.com.au": [],
+        "matrix.activegym.com.au": ["/"],
+        // Legacy & Integration URL's
+        "msg.activegym.com.au": ["/"],
     ]
     
     
@@ -129,7 +121,7 @@ final class BuildSettings: NSObject {
         return false
         #endif
     }
-    static let stunServerFallbackUrlString: String? = "stun:turn.matrix.org"
+    static let stunServerFallbackUrlString: String? = "stun:turn.activegym.com.au"
     
     
     // MARK: -  Public rooms Directory
@@ -137,13 +129,13 @@ final class BuildSettings: NSObject {
     static let publicRoomsAllowServerChange: Bool = true
     // List of homeservers for the public rooms directory
     static let publicRoomsDirectoryServers = [
-        "matrix.org"
+        "matrix.activegym.com.au"
     ]
     
     
     // MARK: - Analytics
-    static let analyticsServerUrl = URL(string: "https://piwik.riot.im/piwik.php")
-    static let analyticsAppId = "14"
+    static let analyticsServerUrl = URL(string: "https://piwik.activegym.com.au/piwik.php")
+    static let analyticsAppId = "10"
     
     
     // MARK: - Bug report
@@ -176,7 +168,7 @@ final class BuildSettings: NSObject {
     static let pinCodeGraceTimeInSeconds: TimeInterval = 0
     
     /// Force non-jailbroken app usage
-    static let forceNonJailbrokenUsage: Bool = true
+    static let forceNonJailbrokenUsage: Bool = false
     
     static let allowSendingStickers: Bool = true
     
@@ -185,10 +177,16 @@ final class BuildSettings: NSObject {
     // MARK: - Feature Specifics
     
     /// Not allowed pin codes. User won't be able to select one of the pin in the list.
-    static let notAllowedPINs: [String] = []
+    static let notAllowedPINs: [String] = [
+            "1234",
+            "1111",
+            "0000",
+            "4321",
+            "0000"
+    ]
     
     /// Maximum number of allowed pin failures when unlocking, before force logging out the user. Defaults to `3`
-    static let maxAllowedNumberOfPinFailures: Int = 3
+    static let maxAllowedNumberOfPinFailures: Int = 5
     
     /// Maximum number of allowed biometrics failures when unlocking, before fallbacking the user to the pin if set or logging out the user. Defaults to `5`
     static let maxAllowedNumberOfBiometricsFailures: Int = 5
@@ -201,19 +199,19 @@ final class BuildSettings: NSObject {
     
     // MARK: - General Settings Screen
     
-    static let settingsScreenShowUserFirstName: Bool = false
-    static let settingsScreenShowUserSurname: Bool = false
+    static let settingsScreenShowUserFirstName: Bool = true
+    static let settingsScreenShowUserSurname: Bool = true
     static let settingsScreenAllowAddingEmailThreepids: Bool = true
     static let settingsScreenAllowAddingPhoneThreepids: Bool = true
     static let settingsScreenShowThreepidExplanatory: Bool = true
     static let settingsScreenShowDiscoverySettings: Bool = true
-    static let settingsScreenAllowIdentityServerConfig: Bool = true
+    static let settingsScreenAllowIdentityServerConfig: Bool = false
     static let settingsScreenShowAdvancedSettings: Bool = true
     static let settingsScreenShowLabSettings: Bool = true
     static let settingsScreenAllowChangingRageshakeSettings: Bool = true
     static let settingsScreenAllowChangingCrashUsageDataSettings: Bool = true
     static let settingsScreenAllowBugReportingManually: Bool = true
-    static let settingsScreenAllowDeactivatingAccount: Bool = true
+    static let settingsScreenAllowDeactivatingAccount: Bool = false
     
     // MARK: - Timeline settings
     static let roomInputToolbarCompressionMode = MXKRoomInputToolbarCompressionModePrompt
@@ -243,7 +241,7 @@ final class BuildSettings: NSObject {
     
     
     // MARK: - Authentication Screen
-    static let authScreenShowRegister = true
+    static let authScreenShowRegister = false
     static let authScreenShowPhoneNumber = true
     static let authScreenShowForgotPassword = true
     static let authScreenShowCustomServerOptions = true

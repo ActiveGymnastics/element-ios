@@ -1,3 +1,27 @@
+Changes to be released in next version
+=================================================
+
+✨ Features
+ * 
+
+🙌 Improvements
+ * Show user id in the room invite preview screen (#3839)
+
+🐛 Bugfix
+ * Crash report cannot be submitted (on small phones) #3819
+
+⚠️ API Changes
+ * 
+
+🗣 Translations
+ * 
+    
+🧱 Build
+ * 
+
+Others
+ * 
+
 Changes in 1.1.3 (2020-12-18)
 =================================================
 
