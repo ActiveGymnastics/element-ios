@@ -1,4 +1,7 @@
 # Element iOS
+Active Build: 
+
+[![Build Status](https://app.bitrise.io/app/102f3d1dabbf4d81/status.svg?token=W4tI7ABa-NiRqn-K2dkOiA)](https://app.bitrise.io/app/102f3d1dabbf4d81)
 
 *This fork has been customised for Active Gymnastics. A couple of the config files have been updated to reflect our needs, and might not be best for normal use. Our Matrix server is a closed federation, so some changes we make might not make sense for regular servers*
 
