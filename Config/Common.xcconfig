@@ -17,11 +17,11 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-BUNDLE_DISPLAY_NAME = Element
+BUNDLE_DISPLAY_NAME = Spot
 
-APPLICATION_GROUP_IDENTIFIER = group.im.vector
+APPLICATION_GROUP_IDENTIFIER = group.au.com.activegym
 
-BASE_BUNDLE_IDENTIFIER = im.vector.app
+BASE_BUNDLE_IDENTIFIER = au.com.activegym.spot
 
 KEYCHAIN_ACCESS_GROUP = $(AppIdentifierPrefix)$(BASE_BUNDLE_IDENTIFIER).keychain.shared
 
