@@ -3,3 +3,4 @@
 
 apple_id ENV["APPLE_ID"]
 team_id ENV["TEAM_ID"]
+app_identifier "au.com.activegym.spot"
