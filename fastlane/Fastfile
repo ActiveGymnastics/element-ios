@@ -84,7 +84,7 @@ platform :ios do
   private_lane :build_release do |options|
     UI.user_error!("'APPLE_ID' environment variable should be set to use this lane") unless !ENV["APPLE_ID"].to_s.empty?
 
-    build_number = options[:build_number]
+    build_number = DateTime.now.strftime("%Y%m%d%H%M%S")
     UI.user_error!("'build_number' parameter is missing") unless !build_number.to_s.empty?
 
     # ad-hoc or app-store?
